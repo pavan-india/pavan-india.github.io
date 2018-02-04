@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('webfonts/GOTHAM-BOLD.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Gotham Med';
+  src: url('webfonts/Gotham-Book.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Gotham Light';
+  src: url('webfonts/GOTHAM-LIGHT.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Gotham Light Italic';
+  src: url('webfonts/Gotham-LightItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Gotham Thin';
+  src: url('webfonts/Gotham-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Gotham Thin Italic';
+  src: url('webfonts/Gotham-ThinItalic.otf') format('opentype');
+}
+
+
+body {
+    font-family: 'Gotham Light', sans-serif;
+}
+h3{
+  font-family: 'Gotham Med';
+}
+.panel-body  {
+    word-break: break-all
+}
+.navigation-bar ul {
+  padding: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+
+#pavan-brand {
+  height: 5.5vh;
+  margin-top: 1vh;
+  margin-left: 0.5vh;
+  margin: 1vh;
+}
+
+.navbar-toggle {
+  color: white;
+}
+
+ul.nav {
+  color: white;
+  font-family: 'Gotham Med';
+  color: white;
+  margin: 1vh;
+  background-color: rgba(0,0,0,0.7);
+}
+
+ul.nav a:hover{
+  background-color: rgba(0,0,0,0.3);
+  color: black;
+}
+
+.navbar-inverse {
+  background: transparent;
+  border:none !important;
+  color: white;
+}
+
+.graphic-row {
+   margin-left: 2vw;
+   margin-right: 2vw;
+}
+
+#carousel-item {
+  text-align: center;
+  width: 100%
+}
+
+.carousel-inner {
+    width: 100%
+}
+
+.carousel-item {
+  width: 100%
+}
+
+#graphic1 {
+    background-image: url('../media/homepage.jpg');
+    background-position: center;
+    margin: auto;
+    background-size: cover;
+    height: 40vw;
+    padding: 5vh;
+}
+
+#graphic1a {
+  font-size: 4vw;
+  margin-top: 20vw;
+  text-align: left;
+  padding: 0.5vw;
+  background-color: rgba(0,0,0,0.5);
+  font-family: 'Gotham Thin Italic';
+}
+
+#graphic1b:hover {
+  -webkit-animation: swing 2s ease;
+  animation: swing 2s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+#graphic1c {
+  -webkit-transition: background-color 0.7s; /* Safari */
+  transition: background-color 0.7s;
+}
+
+#graphic1c:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#home-graphic {
+  list-style: none;
+}
+
+.header2{
+   font-family: 'Gotham Bold';
+}
+
+.next {
+  text-align: right;
+  font-family: 'Gotham Thin Italic';
+  color: #3e4851;
+  margin-top: 1em;
+}
+.graphic-lines {
+    color: white;
+    font-family: 'Halisr Reg';
+}
+.graphic-description {
+  font-family: 'Gotham Med';
+  color: #373F47;
+  font-size: 1.5em;
+
+}
+
+.graphic-description2 {
+  font-family: 'Gotham Light';
+  font-size: 1.2em;
+  color: black;
+}
+
+.graphicHeader {
+  font-family: 'Gotham Bold', sans-serif;
+  font-size: 2em;
+  color: black;
+}
+
+.homepagepic{
+  margin-top: 2em;
+  width: 90%;
+}
+
+
+
+#graphic2 {
+    padding: 5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+
+.card {
+  padding: 3vw;
+  border-style: dashed;
+  border-color: #508991;
+}
+
+.card-btn {
+  color: inherit;
+}
+
+#graphic3 {
+  margin-left: 6vw;
+  padding-right: 5vw;
+}
+
+#graphic4 {
+}
+
+#footer {
+    height: 20em;
+    background-color: #23282d;
+}
+
+#psigroup {
+  padding: 1em;
+  text-align: center;
+}
+
+.logo{
+  height: 7vw;
+  width: 7vw;
+  margin-bottom: 1vw;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:hover{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.footing {
+  font-family: 'Gotham Light';
+  color: white;
+  margin: 5vw;
+  margin-left: 10vw;
+  padding-left: 2vw;
+  border-left: 3px dashed rgba(255, 255, 255, 0.5);
+}
