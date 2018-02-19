@@ -36,9 +36,28 @@ function search(keyword, output) {
 		var table = $("<table/>").addClass("result")
 		var out = document.getElementById(output);
 
+		console.log(result);
 
+		document.getElementById("time-head").innerHTML = "(Last Updated " + result.data[0].time.stime +")";
+		document.getElementById("time-head").setAttribute("style", "font-family: Gotham Med; display: inline-block; font-size: smaller;");
 		for(var i=0; i<result.data.length; i++){
-			out.innerHTML += result.data[i].station.name + " AQI: " + result.data[i].aqi + "<br>";
+			if (result.data[i].aqi.length > 1){
+					out.innerHTML += "<h3>"+result.data[i].station.name + "</h3> <h4> Air Quality Index: <p id=\"data"+i+"\">" + result.data[i].aqi + "</p></h4>";
+					if (result.data[i].aqi > 301){
+						document.getElementById("data"+i).setAttribute("style", "color: #641E16; font-family: Gotham Bold; display: inline-block;");
+					}else if (result.data[i].aqi > 201){
+						document.getElementById("data"+i).setAttribute("style", "color: #633974; font-family: Gotham Bold; display: inline-block;");
+					}else if (result.data[i].aqi > 151){
+						document.getElementById("data"+i).setAttribute("style", "color: #e74c3c; font-family: Gotham Bold; display: inline-block;");
+					}else if (result.data[i].aqi > 101){
+						document.getElementById("data"+i).setAttribute("style", "color: #f39c12; display: inline-block;");
+					}else if (result.data[i].aqi > 51){
+						document.getElementById("data"+i).setAttribute("style", "color: #148f77; display: inline-block;");
+					}else{
+						document.getElementById("data"+i).setAttribute("style", "color: #1f618d;");
+					}
+
+			}
 		}
 		//out.innerHTML += result.data[0].station.name + " AQI: " + result.data[0].aqi;
 		//console.log(out);
@@ -79,7 +98,7 @@ function token() {
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    init("bangalore");
+    init("delhi");
 		console.log("loaded");
 });
 

@@ -78,13 +78,13 @@
 
   <div id="graphic1" class="container-fluid">
     <ul id="home-graphic">
-      <li id="graphic1a" class="graphic-lines"> Current Conditions in: Delhi, India </li>
+      <li id="graphic1a" class="graphic-lines"> Current Conditions in: Delhi, india </li>
     </ul>
 </div>
 
 <div id="graphic2" class="container-fluid">
   <div class="graphicHeader">
-      Find the air quality in your area
+      Find the air quality in your area <h2 id="time-head"></h2>
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -118,13 +118,7 @@
 
             var width = 1300,
               height = 1450;
-/*
-            var zoom = d3.behavior.zoom()
-              .translate([width / 2, height / 2])
-              .scale(scale0)
-              .scaleExtent([scale0, 8 * scale0])
-              .on("zoom", zoomed);
-*/
+
             var projection = d3.geo.albers()
               .center([0, 20.5937])
               .rotate([-78.9629, 0])
@@ -142,15 +136,15 @@
             var color = d3.scale.category10()
 
             // points
-            coords = [[303, 317, 0.1],[322, 222, 0.3],[394, 451, 0.2],[431, 244, 0.4]];
+            coords = [[327, 207, 0.3]];
 
             function showPosition(position) {
-               coords.append([position.coords.latitude, position.coords.longitude]);
+               coords.push([position.coords.latitude, position.coords.longitude]);
             }
 
             if (navigator.geolocation) {
                 navigator.geolocation.watchPosition(showPosition);
-                coords.push([311,231, 0.6]);
+                //coords.push([311,231, 0.6]);
             }
 
             d3.json("india.json", function(error, india) {
@@ -177,7 +171,7 @@
               		.append("circle")
               		.attr("cx", function (d) { return (d)[0]-50; })
               		.attr("cy", function (d) { return (d)[1]-10; })
-              		.attr("r", "2.5em")
+              		.attr("r", "2em")
               		.attr("fill", "red")
                   .style("opacity", function (d) { return (d)[2]; })
                   .each(pulse);
@@ -187,36 +181,18 @@
               			(function repeat() {
               				circle = circle.transition()
                         .duration(1800)
-                        .attr("r","3.5em")
+                        .attr("r","4em")
                         .transition()
-                        .attr("r","2.5em")
+                        .attr("r","2em")
                         .each("end", repeat);
               			})();
               		}
-
-
-
-
             });
-
-
-
-
-
-
-
-
-
 
         });
 
           </script>
-      <!--
 
-      ADD D3 DATA VISUALIZATION HERE: Map to display Delhi with circles of varying colors for the intensity of the AQI.
-
-
-      -->
 
     </div>
     <div class="col-4">
@@ -224,12 +200,9 @@
 
       </div>
     </div>
-
   </div>
 
   <br>
-
-
 
     <div class="graphic-description">
 
@@ -265,25 +238,14 @@
 
 </div>
 <br><br><br><br><br>
-<!--
-<div id="graphic3" class="container-fluid">
-  <div class="graphicHeader">
-    Who We Are
-  </div>
-  <div class="graphic-description">
-  </div>
-
-</div>
-<br><br><br><br><br><br>
--->
 
 
 <div id="footer" >
   <div class="row">
     <div class="col-sm-4 footing">
       <h2>Pavan</h2> <br>
-      @2018 Pavan-India <br>
-      Contact.Pavan.India@gmail.com
+      @2018 Pavan-india <br>
+      Contact.Pavan.india@gmail.com
     </div>
 
     <div class="col-sm-3 footing">
