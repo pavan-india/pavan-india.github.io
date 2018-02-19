@@ -111,10 +111,14 @@
         });
 
         require(["d3","geo","topo"],function(d3,geo,topojson){
-            d3.json("india.json", function(error, india) {
-            if (error) return console.error(error);
-                console.log(india);
-            });
+
+          var legend_labels = ["< 50", "50+", "100+", "150+", "200+", ">300"];
+
+          var color_domain = [50, 150, 350, 750, 1500];
+          var ext_color_domain = ["#641E16", "#633974", "#ffba00", "#ff7d73", "#ff4e40", "#ff1300"];
+          var color = d3.scale.threshold()
+            .domain(color_domain)
+            .range(["#641E16", "#633974", "#ffba00", "#ff7d73", "#ff4e40", "#ff1300"]);
 
             var width = 1300,
               height = 1450;
@@ -187,7 +191,34 @@
                         .each("end", repeat);
               			})();
               		}
+
+
+                  d3.json("india.json", function(error, india) {
+                  if (error) return console.error(error);
+                      console.log(india);
+                  });
+
             });
+
+            var legend = svg.selectAll("g.legend")
+              .data(ext_color_domain)
+              .enter().append("g")
+              .attr("class", "legend");
+
+            var ls_w = 20, ls_h = 20;
+
+            legend.append("rect")
+              .attr("x", 20)
+              .attr("y", function(d, i){ return height - (i*ls_h) - 2*ls_h - 800;})
+              .attr("width", ls_w)
+              .attr("height", ls_h)
+              .style("fill", function(d, i) { return color(d); })
+              .style("opacity", 0.6);
+
+            legend.append("text")
+              .attr("x", 50)
+              .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 4 - 800;})
+              .text(function(d, i){ return legend_labels[i]; });
 
         });
 
