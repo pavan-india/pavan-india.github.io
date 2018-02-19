@@ -44,17 +44,17 @@ function search(keyword, output) {
 			if (result.data[i].aqi.length > 1){
 					out.innerHTML += "<h3>"+result.data[i].station.name + "</h3> <h4> Air Quality Index: <p id=\"data"+i+"\">" + result.data[i].aqi + "</p></h4>";
 					if (result.data[i].aqi > 301){
-						document.getElementById("data"+i).setAttribute("style", "color: #641E16; font-family: Gotham Bold; display: inline-block;");
+						document.getElementById("data"+i).setAttribute("style", "color: #1f618d; font-family: Gotham Bold; display: inline-block;");
 					}else if (result.data[i].aqi > 201){
-						document.getElementById("data"+i).setAttribute("style", "color: #633974; font-family: Gotham Bold; display: inline-block;");
+						document.getElementById("data"+i).setAttribute("style", "color: #148f77; font-family: Gotham Bold; display: inline-block;");
 					}else if (result.data[i].aqi > 151){
-						document.getElementById("data"+i).setAttribute("style", "color: #e74c3c; font-family: Gotham Bold; display: inline-block;");
+						document.getElementById("data"+i).setAttribute("style", "color: #f39c12; font-family: Gotham Bold; display: inline-block;");
 					}else if (result.data[i].aqi > 101){
-						document.getElementById("data"+i).setAttribute("style", "color: #f39c12; display: inline-block;");
+						document.getElementById("data"+i).setAttribute("style", "color: #e74c3c; display: inline-block;");
 					}else if (result.data[i].aqi > 51){
-						document.getElementById("data"+i).setAttribute("style", "color: #148f77; display: inline-block;");
+						document.getElementById("data"+i).setAttribute("style", "color: #633974; display: inline-block;");
 					}else{
-						document.getElementById("data"+i).setAttribute("style", "color: #1f618d;");
+						document.getElementById("data"+i).setAttribute("style", "color: #641E16;");
 					}
 
 			}
