@@ -143,11 +143,14 @@ svg { width:100%; height: 100% }
     font-family: 'Halisr Reg';
 }
 .graphic-description {
-  margin-top: 4em;
+  margin-top: 1em;
   font-family: 'Gotham Med';
   color: #373F47;
   font-size: 1.5em;
+}
 
+.dropdown-menu {
+  background-color: rgba(255,255,255,0.9);
 }
 
 th{
@@ -287,4 +290,9 @@ text {
 
 #result-search{
 
+}
+
+.bol{
+  font-family: 'Gotham Bold';
+  display: inline;
 }

@@ -1,0 +1,8 @@
+#graphic1 {
+    background-image: url('../media/uchicago.jpg');
+    background-position: center;
+    margin: auto;
+    background-size: cover;
+    height: 40vw;
+    padding: 5vh;
+} 
