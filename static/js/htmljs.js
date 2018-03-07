@@ -1,7 +1,7 @@
 $(document).ready(function(){
-   var scroll_start = 0;
-   var startchange = $('#graphic2');
-   var offset = startchange.offset();
+    var scroll_start = 0;
+    var startchange = $('#graphic2');
+    var offset = startchange.offset();
     if (startchange.length){
       $(document).scroll(function() {
       scroll_start = $(this).scrollTop();
@@ -14,6 +14,19 @@ $(document).ready(function(){
           $("ul.nav").css('background-color', 'rgba(0,0,0,0.9)');
           $("#pavan-brand").css('background-color', 'transparent');
        }
-   });
+      });
+    }
+});
+
+var twitter = document.getElementById("twitter");
+
+twitter.addEventListener("click", function() {
+    var style = window.getComputedStyle(twitterinfo).getPropertyValue('display');
+    if(style == 'none'){
+        console.log(style);
+        $("#twitterinfo").css('display','inline-block');
+        $("#twitterinfo").css('padding','3px');
+    }else{
+        $("#twitterinfo").css('display','none');
     }
 });

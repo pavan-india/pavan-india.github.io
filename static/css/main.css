@@ -106,6 +106,17 @@ ul.nav a:hover{
   font-family: 'Gotham Thin Italic';
 }
 
+#twitter {
+  height: 4vw;
+  margin: 0;
+}
+
+#twitterinfo {
+  display: inline-block;
+  color: white;
+  font-family: 'Gotham Thin Italic';
+}
+
 #graphic1b:hover {
   -webkit-animation: swing 2s ease;
   animation: swing 2s ease;
@@ -295,4 +306,8 @@ text {
 .bol{
   font-family: 'Gotham Bold';
   display: inline;
+}
+
+.blue{
+  color: deepskyblue;
 }
