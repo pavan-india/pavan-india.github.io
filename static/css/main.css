@@ -94,7 +94,7 @@ ul.nav a:hover{
     margin: auto;
     background-size: cover;
     height: 40vw;
-    padding: 5vh;
+    padding: 5vw;
 }
 
 #courtesy {
@@ -104,7 +104,7 @@ ul.nav a:hover{
 
 #graphic1a {
   font-size: 4vw;
-  margin-top: 15vw;
+  margin-top: 13vw;
   text-align: left;
   padding: 0.5vw;
   background-color: rgba(0,0,0,0.5);
