@@ -30,3 +30,22 @@ twitter.addEventListener("click", function() {
         $("#twitterinfo").css('display','none');
     }
 });
+
+var action_change_bg = setInterval(changeBG, 3000);
+var bgcount = 0;
+var newURL = "url('../media/homepage/New_Delhi_0.jpg')";
+
+function changeBG() {
+    for (var i=0; i<6; i++){
+        console.log(bgcount);
+        if (bgcount == i){
+            newURL = "url('static/media/homepage/New_Delhi_"+i+".jpg')";
+            $("#graphic1").css('background-image', newURL);
+            $("#graphic1").css('transition', 'background-image 2s ease-out');
+        }
+        if (bgcount == 6){
+            bgcount = 0;
+        }
+    }
+    bgcount += 1;
+}
