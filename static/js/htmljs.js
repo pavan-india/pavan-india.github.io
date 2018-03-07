@@ -31,7 +31,7 @@ twitter.addEventListener("click", function() {
     }
 });
 
-var action_change_bg = setInterval(changeBG, 3000);
+var action_change_bg = setInterval(changeBG, 5000);
 var bgcount = 0;
 var newURL = "url('../media/homepage/New_Delhi_0.jpg')";
 
