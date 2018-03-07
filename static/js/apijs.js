@@ -47,8 +47,8 @@ function search(keyword, output) {
 					if (result.data[i].station.name == "Anand Vihar, Delhi, Delhi, India"){
                         specific.innerHTML +=
 							"<h3 class='bol'>Location: "+result.data[i].station.name + "</h3> " +
-                            "<h3>Date: "+result.data[i].time.stime.substring(0,10) + "</h3> " +
-                            "<h3>Time: "+result.data[i].time.stime.substring(10,) + "</h3> " +
+                            "<h3>Date: "+result.data[0].time.stime.substring(0,10) + "</h3> " +
+                            "<h3>Time: "+result.data[0].time.stime.substring(10,) + "</h3> " +
 							"<h3> Your air quality is: <p id=\"data"+i+"\">" + result.data[i].aqi + "</p></h3>";
                         var newdelhi = document.getElementById("jqvmap1_40nd");
                         if (result.data[i].aqi > 301){
