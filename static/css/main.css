@@ -121,7 +121,7 @@ ul.nav a:hover{
   color: white;
   background-color: rgba(0,0,0,0.3);
   padding: 5px;
-  font-size: 1.2vw;
+  font-size: 1.6vw;
   font-family: 'Gotham Thin Italic';
 }
 
@@ -318,4 +318,11 @@ text {
 
 .blue{
   color: deepskyblue;
+}
+
+.jqvmap-zoomin, .jqvmap-zoomout {
+  padding-top: 2px;
+  width: 18px;
+  height: 12px;
+  cursor: auto;
 }
