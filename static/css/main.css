@@ -307,8 +307,14 @@ text {
   color: black;
 }
 
-#result-search{
+#resultsearch{
+  display: none;
+  margin-left: 2vw;
 
+}
+
+#jqvmap1_40nd.jvectormap-region{
+  fill: red;
 }
 
 .bol{
@@ -325,4 +331,17 @@ text {
   width: 18px;
   height: 12px;
   cursor: auto;
+}
+
+#seemore{
+  background-color: orange;
+  color: white;
+  margin-left: 15px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+p{
+  line-height: 10px;
+  display: inline;
 }

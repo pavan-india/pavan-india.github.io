@@ -23,11 +23,23 @@ var twitter = document.getElementById("twitter");
 twitter.addEventListener("click", function() {
     var style = window.getComputedStyle(twitterinfo).getPropertyValue('display');
     if(style == 'none'){
-        console.log(style);
         $("#twitterinfo").css('display','inline-block');
         $("#twitterinfo").css('padding','3px');
     }else{
         $("#twitterinfo").css('display','none');
+    }
+});
+
+var seemore = document.getElementById("seemore");
+
+seemore.addEventListener("click", function() {
+    var style = window.getComputedStyle(resultsearch).getPropertyValue('display');
+    if(style == 'none'){
+        $("#resultsearch").css('display','block');
+        seemore.innerHTML = "Click to Close Other Stations in: New Delhi"
+    }else{
+        $("#resultsearch").css('display','none');
+        seemore.innerHTML = "Click to See More Stations in: New Delhi"
     }
 });
 
