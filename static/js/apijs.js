@@ -50,7 +50,7 @@ function search(keyword, output) {
                             "<h3>Date: "+result.data[0].time.stime.substring(0,10) + "</h3> " +
                             "<h3>Time: "+result.data[0].time.stime.substring(10,) + "</h3> " +
 							"<h3> Your air quality is: <p id=\"data"+i+"\">" + result.data[i].aqi + "</p></h3>";
-                        var newdelhi = document.getElementById("jqvmap1_40nd");
+                        var newdelhi = document.getElementById("jqvmap1_7nw");
                         if (result.data[i].aqi > 301){
                             specific.innerHTML +=  "<h3>This means: <p style=\"color: #641E16;\">Hazardous </p></h3> ";
                             specific.innerHTML +=  "<h3>Action: <p style=\"color: #641E16;\">Remain indoors. Everyone should avoid all outdoor exertion. </p></h3> ";
