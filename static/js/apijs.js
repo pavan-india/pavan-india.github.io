@@ -44,7 +44,7 @@ function search(keyword, output) {
 		for(var i=0; i<result.data.length; i++){
 			if (result.data[i].aqi.length > 1){
 
-					if (result.data[i].station.name == "Anand Vihar, Delhi, Delhi, India"){
+					if (result.data[i].station.name == result.data[0].station.name){
                         specific.innerHTML +=
 							"<h3 class='bol'>Location: "+result.data[i].station.name + "</h3> " +
                             "<h3>Date: "+result.data[0].time.stime.substring(0,10) + "</h3> " +
