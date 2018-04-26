@@ -32,7 +32,7 @@ function search(keyword, output) {
 			output.append("Sorry, there is no result for your query!")
 			return
 		}
-
+		console.log(result);
 		var table = $("<table/>").addClass("result");
 		var out = document.getElementById(output);
 
